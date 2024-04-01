@@ -17,6 +17,7 @@ public class BaseClass {
         public String driverValue= readconfig.getDriver();
         public static WebDriver driver;
         public static Logger logger;
+    //Test edit from github
 
 
         @BeforeTest
