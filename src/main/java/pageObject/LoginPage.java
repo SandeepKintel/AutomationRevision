@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class LoginPage {
     WebDriver ldriver; //creating an instance of the driver
@@ -21,6 +22,15 @@ public class LoginPage {
 
     @FindBy(xpath = "//input[@id='login-button']")
     WebElement loginButton;
+
+    public void verifyLoginPage(){
+        if(loginButton.isDisplayed()){
+            Assert.assertTrue(true);
+            System.out.println("Button Is Displayed");
+        }else{
+            Assert.assertTrue(false);
+        }
+    }
 
     public void enterUserName(String Email){
         username.sendKeys(Email);

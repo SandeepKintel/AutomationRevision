@@ -8,8 +8,14 @@ public class LoginTestCase extends BaseClass {
     public void LoginTestCase() {
         driver.get(baseUrl);
         LoginPage lp = new LoginPage(driver);
+        logger.info("Directed to the Website");
+        lp.verifyLoginPage();
+        logger.info("User is successfully navigated to the Login Page");
         lp.enterUserName(userName);
+        logger.info("Username has been entered");
         lp.enterPassword(passWord);
+        logger.info("Password has been entered");
         lp.clickLoginButton();
+        logger.info("User has been successfully logged In");
     }
 }
