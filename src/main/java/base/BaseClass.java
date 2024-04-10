@@ -1,5 +1,7 @@
 package base;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -14,9 +16,13 @@ public class BaseClass {
         public String baseUrl = readconfig.getAppUrl();
         public String userName= readconfig.getEmail();
         public String passWord= readconfig.getPassword();
-        public String driverValue= readconfig.getDriver();
+        //public String driverValue= readconfig.getDriver();
         public static WebDriver driver;
         public static Logger logger;
+
+        public static ExtentReports report;
+        public static ExtentTest test;
+        public static ExtentReports extent = new ExtentReports();
     //Test edit from github
     //Second Edit from Github 
 
