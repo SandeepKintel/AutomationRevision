@@ -1,9 +1,11 @@
 import base.BaseClass;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import org.testng.annotations.Test;
 import pageObject.ProductPage;
 
 public class ProductPageTestCase extends BaseClass {
 
+    @Test
     public void ProductPageTestCase(){
         driver.get(baseUrl);
         ExtentSparkReporter spark=new ExtentSparkReporter("target/spark.html");
