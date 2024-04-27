@@ -10,9 +10,13 @@ public class ReadConfig {
 
     Properties pro;
     public ReadConfig(){
-        File src = new File("src/main/java/config/config.properties");
+        File src = new File("src/main/java/config/config.properties"); //Create a file
         try{
-            FileInputStream fis = new FileInputStream(src);
+            FileInputStream fis = new FileInputStream(src); //Read a file with Raw bytes- First of all,
+            // you need to instantiate this class by passing a String variable or a File object,
+            // representing the path of the file to be read.
+
+
             pro = new Properties();
             pro.load(fis);
         }catch (FileNotFoundException e){

@@ -4,6 +4,7 @@
     <test verbose="2" preserve-order="true" name="C:/JAVA LEARNING/AutomationRevision">
         <classes>
            <class name="LoginTestCase"></class>
+            <class name="ProductPageTestCase"></class>
         </classes>
 
     </test></suite>
