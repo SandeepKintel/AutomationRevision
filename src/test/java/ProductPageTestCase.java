@@ -4,7 +4,7 @@ import pageObject.ProductPage;
 
 public class ProductPageTestCase extends BaseClass {
 
-    public void ProductPage(){
+    public void ProductPageTestCase(){
         driver.get(baseUrl);
         ExtentSparkReporter spark=new ExtentSparkReporter("target/spark.html");
         extent.attachReporter(spark);
