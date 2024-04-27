@@ -30,6 +30,6 @@ public class ProductPage {
     }
 
     public void clickOnSauceLab(){
-        Product.click();
+        FirstProduct.click();
     }
 }
