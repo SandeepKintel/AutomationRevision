@@ -7,14 +7,14 @@ public class ProductPageTestCase extends BaseClass {
 
     @Test
     public void ProductPageTestCase(){
-        driver.get(baseUrl);
+        //driver.get(baseUrl);
         ExtentSparkReporter spark=new ExtentSparkReporter("target/spark.html");
         extent.attachReporter(spark);
         ProductPage pg =new ProductPage(driver);
         logger.info("Directing to the Product Page");
         test = extent.createTest("Navigating to the Product Page");
         pg.verifyProductPage();
-        logger.info("Navigated to the Product Page");
+        logger.info("Successfully Navigated to the Product Page");
         test  = extent.createTest("User is successfully directed to the Product Page");
         pg.clickOnSauceLab();
         logger.info("Clicking on the Sauce Lab Backpack");

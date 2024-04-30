@@ -6,6 +6,8 @@
             <class name="LoginTestCase"></class>
 
             <class name="ProductPageTestCase"></class>
+
+            <class name="ProductTestCase"></class>
         </classes>
 
     </test></suite>
