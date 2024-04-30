@@ -16,14 +16,20 @@ public class SauceLabBackPack {
         PageFactory.initElements(rdriver,this);
     }
 
+    @FindBy (xpath = "//a[@class='shopping_cart_link']")
+    WebElement CartButton;
     @FindBy (xpath = "//button[@id='add-to-cart']")
     WebElement AddToCart;
+
+    @FindBy (xpath = "//button[@id='remove']")
+    WebElement RemoveText;
 
 
     public void verifySauceLabBackPackPage(){
         ProductPage pg =new ProductPage(ldriver);
+        WebElement Prod = pg.FirstProduct;
 
-        if(pg.Product.isDisplayed()){
+        if(Prod.isDisplayed()){
             Assert.assertTrue(true);
             System.out.println("Product Page is displayed");
         }else{
@@ -34,6 +40,22 @@ public class SauceLabBackPack {
     public void clickAddToCart(){
         AddToCart.click();
     }
+
+    public void clickOnCartButton(){
+        CartButton.click();
+    }
+
+    public void verifyAddToCartAction(){
+        if(RemoveText.isDisplayed()){
+            Assert.assertTrue(true);
+            System.out.println("Item has been added to the Cart");
+        }else{
+            Assert.assertTrue(false);
+        }
+    }
+
+
+
 
 
 }
