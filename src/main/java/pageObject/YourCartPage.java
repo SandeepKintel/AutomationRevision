@@ -17,6 +17,12 @@ public class YourCartPage {
     @FindBy (xpath = "//span[text()='Your Cart']")
     WebElement YourCartText;
 
+    @FindBy (xpath = "//button[@id=\"continue-shopping\"]")
+    WebElement ContinueShoppingButton;
+
+    @FindBy (xpath = "//button[@id=\"checkout\"]")
+    WebElement CheckoutButton;
+
 
 
     public void verifyCartPage(){
@@ -26,5 +32,9 @@ public class YourCartPage {
         }else {
             Assert.assertTrue(false);
         }
+    }
+
+    public void clickOnCheckoutButton(){
+        CheckoutButton.click();
     }
 }
